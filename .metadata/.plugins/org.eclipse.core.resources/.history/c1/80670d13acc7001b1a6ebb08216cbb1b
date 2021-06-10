@@ -1,0 +1,22 @@
+package PhoneNumber;
+import java.util.Scanner;
+import java.util.regex.*;
+public class PhoneNumber {
+	public static void main( String[] args) {
+		String a[];
+		a = new String[5];
+		String SDT;
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Nhập số điện thoại của bạn: ");
+		for (int i = 0; i < 5; i++) {
+			SDT = sc.nextLine(); //Nhận 1 chuỗi từ bàn phím
+			if (SDT.matches("((84)+([0-9]{9}))|((|0[3|5|7|8|9])+([0-9]{8}))\\b")) 
+				a[i] = SDT;
+			}
+			System.out.println("Số điện thoại hợp lệ là : ");
+			for ( int i = 0; i < 5; i++) 
+				System.out.print("\t" + a[i]);
+			
+		}
+		
+}

@@ -1,0 +1,26 @@
+package PhoneNumber;
+import java.util.Scanner;
+import java.util.regex.*;
+public class PhoneNumber {
+	public static void main( String[] args) {
+		String a[];
+		a = new String[5];
+		String PhoneNumber="";
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Nhập số điện thoại của bạn: ");
+		for(int i = 0; i < 5; i++) {
+			PhoneNumber = sc.nextLine();
+			String pattern = ("((84) +([0-9]{9}))|((|0[3|5|7|8|9])+([0-9]{8}))\\b");
+			if (PhoneNumber.matches(pattern)) {
+				a[i] = PhoneNumber;
+			}
+			else
+				a[i] = a[i+1];
+		}
+		System.out.println("Số điện thoại hợp lệ là : ");
+		for(int i = 0; i < 5; i++) 
+			System.out.println("\t" + a[i]);
+		
+	}
+		
+}

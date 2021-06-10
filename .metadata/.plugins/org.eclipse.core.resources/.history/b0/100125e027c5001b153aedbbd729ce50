@@ -1,0 +1,25 @@
+package Nhapso;
+import java.util.Scanner;
+public class Nhapso {
+
+	public static void main (String[] args) {
+		Scanner scanln = new Scanner(System.in);
+		int x;
+		System.out.println("Nhập : ");
+		
+		try {
+			x = scanln.nextInt();
+		}
+		catch(IOException e)
+		{
+			System.out.println("Error!!!");
+		}
+		
+		System.out.println("Bạn vừa nhập số: " + x + "!");
+		
+		
+		
+		
+	}
+
+}
